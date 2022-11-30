@@ -105,7 +105,7 @@ STDMETHODIMP CDecodeManager::CreateDecoder(const CMediaType *pmt, AVCodecID code
     }
     SAFE_DELETE(m_pDecoder);
 
-    LAVHWAccel hwAccel = m_pLAVVideo->GetHWAccel();
+    LAVHWAccel hwAccel = LAVHWAccel::HWAccel_CUDA/*m_pLAVVideo->GetHWAccel()*/;
     if (!bHWDecBlackList && hwAccel != HWAccel_None && !m_bHWDecoderFailed && HWFORMAT_ENABLED && HWRESOLUTION_ENABLED)
     {
         DbgLog((LOG_TRACE, 10, L"-> Trying Hardware Codec %d", hwAccel));

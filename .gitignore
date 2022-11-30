@@ -11,3 +11,5 @@
 /bin_*
 /common/includes/version_rev.h
 /.vs
+/Artifacts
+/LAVFilters-0.77.1.exe
